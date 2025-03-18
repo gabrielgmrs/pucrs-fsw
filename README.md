@@ -8,7 +8,7 @@ Projeto de avaliação para a disciplina Fundamentos de Sistema Web - Fase 1 da 
    - Abra o arquivo `index.html` em seu navegador.
 
 2. **GitHub Pages**:  
-   - TBA
+   - Acesse [https://gabrielgmrs.github.io/pucrs-fsw/](https://gabrielgmrs.github.io/pucrs-fsw/)
 
 ## Funcionalidades
 
