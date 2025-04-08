@@ -1,35 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Minimercado - Início</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimercado</title>
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Estilos Customizados -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header class="py-3">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <h1 class="mb-0">Minimercado</h1>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Alternar navegação"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <header>
-    <h1>Minimercado</h1>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="produtos.html">Produtos</a> |
-      <a href="servicos.html">Serviços</a>
-    </nav>
-  </header>
+    <!-- Conteúdo Principal -->
+    <main class="container my-5">
+      <!-- Slideshow com imagem lateral -->
+      <div
+        id="promoCarousel"
+        class="carousel slide mb-4"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row align-items-center">
+              <!-- Coluna da Imagem -->
+              <div class="col-md-6">
+                <img
+                  src="imagens/arroz.jpeg"
+                  class="d-block w-100 lateral-img"
+                  alt="Promoção de Arroz"
+                />
+              </div>
+              <!-- Coluna do Texto -->
+              <div class="col-md-6">
+                <div class="carousel-text">
+                  <span class="badge promotion-badge">PROMOÇÃO</span>
+                  <h5>Arroz Tipo 1: Seleção Especial</h5>
+                  <p>Arroz de qualidade com preço imperdível!</p>
+                  <a href="produtos.html" class="btn btn-accent"
+                    >Ver Produtos</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img
+                  src="imagens/maca.jpeg"
+                  class="d-block w-100 lateral-img"
+                  alt="Promoção de Maçã"
+                />
+              </div>
+              <div class="col-md-6">
+                <div class="carousel-text">
+                  <span class="badge promotion-badge">PROMOÇÃO</span>
+                  <h5>Maçã Gala: Frescor e Sabor</h5>
+                  <p>Frutas selecionadas para o seu bem-estar.</p>
+                  <a href="produtos.html" class="btn btn-accent"
+                    >Ver Produtos</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controles Customizados -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#promoCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#promoCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
 
-  <hr>
-  
-  <main>
-    <h2>Bem-vindo ao Minimercado!</h2>
-    <p>Aqui você encontra frutas, verduras, produtos não perecíveis e itens de higiene/limpeza, além de serviços de retirada no local e tele-entrega.</p>
-    
-    <p>Escolha uma opção no menu acima para ver nossos produtos e serviços.</p>
-  </main>
-  
-  <hr>
+      <!-- Caixa: Promoção - Timer e Cupom de Desconto Juntos -->
+      <div class="section-box">
+        <section id="promo-info" class="text-center">
+          <h2>Aproveite: Oferta termina em <span id="countdown"></span></h2>
+          <button id="couponBtn" class="btn btn-accent mt-3">
+            Obter Cupom de Desconto
+          </button>
+          <p id="couponMessage" class="mt-2"></p>
+        </section>
+      </div>
 
-  <footer>
-    <p>© 2025 - Minimercado. Todos os direitos reservados. Desenvolvido por <a href="https://github.com/gabrielgmrs">GG.</a></p>
-    <p>Contato: <a href="mailto:contato@minimercado.com.br">contato@minimercado.com.br</a></p>
-  </footer>
+      <!-- Caixa: Boas-Vindas e Informações -->
+      <div class="section-box">
+        <section class="row">
+          <h2>Bem-vindo ao Minimercado</h2>
+          <article class="col-md-6">
+            <h3>Produtos</h3>
+            <p>
+              Aqui você encontra os melhores produtos e serviços para o seu dia
+              a dia. Confira nossas categorias:
+            </p>
+            <ul>
+              <li>Frutas e Verduras</li>
+              <li>Produtos Alimentícios Não Perecíveis</li>
+              <li>Produtos de Higiene e Limpeza</li>
+            </ul>
+          </article>
+          <aside class="col-md-6">
+            <h3>Serviços</h3>
+            <p>
+              Oferecemos duas opções de agendamento: retirada no local ou
+              tele-entrega, garantindo praticidade e segurança.
+            </p>
+          </aside>
+        </section>
+      </div>
+    </main>
 
-</body>
+    <!-- Rodapé -->
+    <footer class="py-3">
+      <div class="container text-center">
+        <p>&copy; 2025 Minimercado - Todos os direitos reservados</p>
+        <p>
+          <a href="termos.html">Termos de Serviço</a> |
+          <a href="privacidade.html">Política de Privacidade</a> |
+          <a href="contato.html">Contato</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle com Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Customizado -->
+    <script src="./static/js/index.js"></script>
+  </body>
 </html>

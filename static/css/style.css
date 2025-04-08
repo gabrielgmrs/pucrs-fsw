@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2ecc71; /* Verde vibrante */
+  color: #fff;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+/* Botões de Ação */
+.btn-accent {
+  background-color: #e67e22; /* Laranja vibrante */
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.btn-accent:hover {
+  background-color: #d35400;
+}
+
+/* Slideshow com imagem lateral */
+.lateral-img {
+  max-height: 220px;
+  width: 100%;
+  object-fit: contain;
+}
+.carousel-text {
+  padding: 20px;
+}
+.carousel-text h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.carousel-text p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Badge para Promoção */
+.promotion-badge {
+  background-color: #f1c40f; /* Amarelo vibrante */
+  color: #333;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Customização das setas do slider */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  background-color: #e67e22;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-prev-icon::after {
+  content: "<";
+  font-size: 2rem;
+  color: #fff;
+}
+.carousel-control-next-icon::after {
+  content: ">";
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Seção do Contador e Cupom (Promo Info) */
+#promo-info h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0;
+}
+#couponMessage {
+  font-size: 1.2rem;
+  color: #e67e22;
+  font-weight: 600;
+}
+
+/* Conteúdo Principal */
+main h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+main p,
+main ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+main ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Caixa de Seção */
+.section-box {
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #2ecc71; /* Mesmo que o header */
+  color: #fff;
+  padding: 20px 0;
+}
+footer p {
+  margin: 5px 0;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Espaçamento e container */
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+}

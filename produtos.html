@@ -1,87 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Minimercado - Produtos</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Produtos - Minimercado</title>
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Estilos Customizados -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header class="py-3">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <h1 class="mb-0">Minimercado</h1>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Alternar navegação"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <header>
-    <h1>Minimercado</h1>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="produtos.html">Produtos</a> |
-      <a href="servicos.html">Serviços</a>
-    </nav>
-  </header>
+    <!-- Conteúdo Principal -->
+    <main class="container my-5">
+      <div class="section-box">
+        <h2 class="text-center mb-4">Nossos Produtos</h2>
 
-  <hr>
+        <!-- Filtro por Categoria via Select -->
+        <div class="mb-4 text-center">
+          <label for="filterSelect" class="form-label"
+            >Filtrar por Categoria:</label
+          >
+          <select
+            id="filterSelect"
+            class="form-select w-auto d-inline-block ms-2"
+          >
+            <option value="all">Todos</option>
+            <option value="frutas">Frutas e Verduras</option>
+            <option value="alimenticios">
+              Produtos Alimentícios Não Perecíveis
+            </option>
+            <option value="higiene">Produtos de Higiene e Limpeza</option>
+          </select>
+        </div>
 
-  <main>
-    <h2>Nossos Produtos</h2>
-    
-    <section>
-      <h3>Frutas e Verduras</h3>
+        <!-- Container de Produtos -->
+        <div class="row" id="productContainer">
+          <!-- Produto 1: Arroz -->
+          <div class="col-md-4 mb-4 product-item alimenticios">
+            <div class="card h-100">
+              <img
+                src="imagens/arroz.jpeg"
+                class="card-img-top"
+                alt="Arroz Tipo 1: Seleção Especial"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Arroz Tipo 1: Seleção Especial</h5>
+                <p class="card-text">
+                  Arroz de qualidade com grãos soltos e sabor marcante, ideal
+                  para suas receitas.
+                </p>
+                <p class="card-text"><strong>Preço:</strong> R$ 8,99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Produto 2: Feijão -->
+          <div class="col-md-4 mb-4 product-item alimenticios">
+            <div class="card h-100">
+              <img
+                src="imagens/feijao.jpeg"
+                class="card-img-top"
+                alt="Feijão Carioca"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Feijão Carioca</h5>
+                <p class="card-text">
+                  Feijão selecionado, perfeito para dar sabor às suas refeições
+                  diárias.
+                </p>
+                <p class="card-text"><strong>Preço:</strong> R$ 9,99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Produto 3: Maçã -->
+          <div class="col-md-4 mb-4 product-item frutas">
+            <div class="card h-100">
+              <img
+                src="imagens/maca.jpeg"
+                class="card-img-top"
+                alt="Maçã Gala: Frescor e Sabor"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Maçã Gala: Frescor e Sabor</h5>
+                <p class="card-text">
+                  Maçãs Gala frescas, cuidadosamente selecionadas para
+                  proporcionar sabor e qualidade.
+                </p>
+                <p class="card-text"><strong>Preço:</strong> R$ 4,99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Produto 4: Alface -->
+          <div class="col-md-4 mb-4 product-item frutas">
+            <div class="card h-100">
+              <img
+                src="imagens/alface.jpeg"
+                class="card-img-top"
+                alt="Alface Crespa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Alface Crespa</h5>
+                <p class="card-text">
+                  Alface fresca, perfeita para saladas e para dar um toque
+                  especial à sua refeição.
+                </p>
+                <p class="card-text"><strong>Preço:</strong> R$ 2,50</p>
+              </div>
+            </div>
+          </div>
+          <!-- Produto 5: Detergente -->
+          <div class="col-md-4 mb-4 product-item higiene">
+            <div class="card h-100">
+              <img
+                src="imagens/detergente.jpeg"
+                class="card-img-top"
+                alt="Detergente Líquido"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Detergente Líquido</h5>
+                <p class="card-text">
+                  Detergente de alta eficácia para limpeza diária, garantindo um
+                  lar sempre impecável.
+                </p>
+                <p class="card-text"><strong>Preço:</strong> R$ 3,99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Produto 6: Sabonete -->
+          <div class="col-md-4 mb-4 product-item higiene">
+            <div class="card h-100">
+              <img
+                src="imagens/sabonete.jpeg"
+                class="card-img-top"
+                alt="Sabonete Líquido"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sabonete Líquido</h5>
+                <p class="card-text">
+                  Sabonete líquido suave, formulado para cuidar da pele com
+                  delicadeza.
+                </p>
+                <p class="card-text"><strong>Preço:</strong> R$ 2,99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-      <article>
-        <h4>Maçã</h4>
-        <img src="imagens/maca.jpeg" alt="Maçã" width="120">
-        <p>Maçãs frescas e selecionadas.</p>
-        <p>Valor: R$ 4,50 / kg</p>
-      </article>
+    <!-- Rodapé -->
+    <footer class="py-3">
+      <div class="container text-center">
+        <p>&copy; 2025 Minimercado - Todos os direitos reservados</p>
+        <p>
+          <a href="termos.html">Termos de Serviço</a> |
+          <a href="privacidade.html">Política de Privacidade</a> |
+          <a href="contato.html">Contato</a>
+        </p>
+      </div>
+    </footer>
 
-      <article>
-        <h4>Alface</h4>
-        <img src="imagens/alface.jpeg" alt="Alface" width="120">
-        <p>Alface crocante, ideal para saladas.</p>
-        <p>Valor: R$ 2,00 / maço</p>
-      </article>
-    </section>
-
-    <section>
-      <h3>Alimentícios Não Perecíveis</h3>
-
-      <article>
-        <h4>Arroz</h4>
-        <img src="imagens/arroz.jpeg" alt="Arroz" width="120">
-        <p>Pacote de 5Kg de arroz tipo 1.</p>
-        <p>Valor: R$ 20,00</p>
-      </article>
-
-      <article>
-        <h4>Feijão</h4>
-        <img src="imagens/feijao.jpeg" alt="Feijão" width="120">
-        <p>Pacote de 1Kg de feijão carioca.</p>
-        <p>Valor: R$ 8,00</p>
-      </article>
-    </section>
-
-    <section>
-      <h3>Higiene e Limpeza</h3>
-
-      <article>
-        <h4>Sabonete</h4>
-        <img src="imagens/sabonete.jpeg" alt="Sabonete" width="120">
-        <p>Sabonete hidratante.</p>
-        <p>Valor: R$ 3,00 (unidade)</p>
-      </article>
-
-      <article>
-        <h4>Detergente</h4>
-        <img src="imagens/detergente.jpeg" alt="Detergente" width="120">
-        <p>Detergente líquido 500ml.</p>
-        <p>Valor: R$ 2,50</p>
-      </article>
-    </section>
-  </main>
-
-  <hr>
-
-  <footer>
-    <p>© 2025 - Minimercado. Todos os direitos reservados. Desenvolvido por <a href="https://github.com/gabrielgmrs">GG.</a></p>
-    <p>Contato: <a href="mailto:contato@minimercado.com.br">contato@minimercado.com.br</a></p>
-    <p><a href="index.html">Voltar à Página Inicial</a></p>
-  </footer>
-
-</body>
+    <!-- Bootstrap JS Bundle com Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Filtro por Categoria com Select -->
+    <script src="./static/js/produtos.js"></script>
+  </body>
 </html>
